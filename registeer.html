@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="bootstrap-5.3.1-dist/css/bootstrap.min.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <title>regisrter</title>
+
+    
+    <style>
+        body{
+            background-color:#dddddd;
+        }
+      </style>
+    <title>Facebook register</title>
+  </head>
+  <body>
+    <div class="container text-center" style="margin-top: 50px;">
+        
+          <div class="col ">
+            <div class="container-fluid">
+                <h1>Create an account</h1>
+                <!-- <form  class=" needs-validation" novalidate id="loginForm" action="login.html" style="border:  gray 1px solid; padding: 20px;"> -->
+                  <form class="row g-3 needs-validation" novalidate action="login.html" style="border:  gray 1px solid; padding: 20px;">
+                    
+                    <div class="row">
+                    <div class="col-md-12">
+                      <label for="email" class="form-label">Email</label>
+                      <div class="input-group has-validation">
+                        <!-- <span class="input-group-text" id="inputGroupPrepend"></span> -->
+                        <input type="email" class="form-control" id="email" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                          Please enter a valid email.
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-12">
+                      <label for="username" class="form-label">User name</label>
+                      <input type="text" class="form-control" id="username" required>
+                      <div class="invalid-feedback">
+                        Please enter user name.
+                      </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-12">
+                      <label for="password" class="form-label" >password</label>
+                      <input type="password" class="form-control" id="password" minlength="9" required>
+                      <div class="invalid-feedback">
+                        Please enter a password.
+                      </div>
+                    </div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                    <div class="col-md-12">
+                      <button class="btn btn-primary" type="submit" style="width: 50%;" >sign up</button>
+                    </div>
+                    </div>
+                  </form>
+              </div>
+            </div>
+              <div class="col " style="margin-top: 50px;">
+                <h1 class="text-primary p-3">Facebook</h1>
+                <p style="font-size: x-large;">Facebook helps you connect and share with the people in your life.</p>
+
+        
+    </div>
+    </div>
+          
+          
+    <script src="./bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+     <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+  var username = document.getElementById("username");
+var email = document.getElementById("email");
+var password = document.getElementById("password");
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+        localStorage.setItem("username", username.value);
+    localStorage.setItem("email", email.value);
+    localStorage.setItem("password", password.value);
+    console.log(email.value);
+    console.log(username.value);
+    console.log(password.value);
+    
+
+      }
+      
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+    </script> 
+           <!-- <script src="register.js"></script>    -->
+
+  </body>
